@@ -1,0 +1,22 @@
+Dear Editors of Journal of Hydrology: Regional Studies,
+
+Please consider our manuscript entitled:
+
+"Value of upstream gauge information for multi-horizon streamflow forecasting in the Potomac River basin: comparing deep learning and gradient boosting"
+
+for publication as an original research article.
+
+Fit to journal scope. The manuscript provides region-specific hydrological insight for the mid-Atlantic Potomac River system. Using a fully public USGS gauge network, we quantify the marginal value of upstream hydrometric information for 1-, 3-, and 7-day streamflow forecasts at Washington, D.C., and we diagnose flood-relevant residual errors by season and peak events. The contribution is framed as regional forecasting and network-design evidence rather than a claim of a universal new architecture.
+
+Methods and diagnostics. We compare Persistence, XGBoost, LSTM, and LSTM-Attention under a chronological train/validation/test split, and we report stratified and seasonal NSE, peak magnitude/timing errors, multi-seed uncertainty for deep models, and permutation-based interpretability.
+
+Compliance. The manuscript includes the required structured abstract (Study region; Study focus; New hydrological insights for the region), Highlights (≤85 characters each), numbered double-line spacing, and author–year citations.
+
+Data and code. USGS NWIS discharge and Open-Meteo meteorology are public; processed tables and scripts accompany the submission package.
+
+Suggested reviewers can be provided upon request. We confirm that this work has not been published elsewhere and is not under consideration by another journal.
+
+Sincerely,
+[Corresponding Author Name]
+[Affiliation]
+[Email]

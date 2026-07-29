@@ -1,0 +1,20 @@
+{
+  "01636500": {
+    "name": "Shenandoah River at Millville, WV",
+    "lat": 39.2886,
+    "lon": -77.7867,
+    "role": "tributary"
+  },
+  "01638480": {
+    "name": "Potomac River at Harpers Ferry, WV",
+    "lat": 39.3226,
+    "lon": -77.7283,
+    "role": "midstream"
+  },
+  "01646500": {
+    "name": "Potomac River at Washington, DC",
+    "lat": 38.9498,
+    "lon": -77.1278,
+    "role": "downstream"
+  }
+}

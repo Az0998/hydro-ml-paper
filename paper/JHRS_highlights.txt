@@ -1,0 +1,5 @@
+• Upstream Potomac gauges lift 1-day forecast NSE versus local-only inputs.
+• LSTM-Attention leads at 1 day; skill falls sharply toward the weekly horizon.
+• High-flow NSE and peak timing expose flood-relevant model limits.
+• Permutation tests rank local discharge highest, then upstream flows.
+• Results guide mid-Atlantic short-range forecasting network design.

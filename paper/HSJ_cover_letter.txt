@@ -1,0 +1,26 @@
+Dear Editors of Hydrological Sciences Journal,
+
+Please consider our Research Article:
+
+"Information value of upstream gauges and precipitation foresight for multi-horizon streamflow forecasting: Potomac–James mid-Atlantic evidence"
+
+(System short title if needed: "Information value of gauges and QPF for Potomac-James streamflow forecasts")
+
+Fit to journal scope.
+Short-range streamflow forecasting at major mid-Atlantic outlets depends on how information is partitioned among gauge-network memory, nonlinear learning, and precipitation foresight. This manuscript quantifies that partition for the Potomac River at Washington, D.C., and tests whether the same protocol transfers to the neighboring James River near Richmond. We believe the results provide transferable hydrological insight for regional forecasting and gauge-network design, consistent with the aims of Hydrological Sciences Journal.
+
+Contribution highlights.
+1) Skill is evaluated against a lagged-upstream linear routing baseline, not persistence alone, so machine-learning gains are interpreted relative to a simple hydrologic reference.
+2) The identical experimental protocol is applied to Potomac and James outlets to assess mid-Atlantic transferability and basin-dependent upstream-gauge value (ablation).
+3) A precipitation foresight ladder compares observation-only forcing, precipitation persistence, real GFS previous-run QPF (2024), and a perfect-foresight oracle ceiling.
+4) P90 flood-threshold CSI/POD/FAR links bulk NSE to flood-alert utility.
+
+Key messages.
+Next-day forecasts are largely routing-dominated, with basin-dependent upstream-gauge value. Three- to seven-day observation-only forecasts are information-limited. Real GFS QPF can help at one day but is not a naive drop-in at longer leads, even though oracle experiments show unused skill.
+
+Data and originality.
+Primary data are public (USGS NWIS; Open-Meteo archive and previous-run APIs). The manuscript is original and not under consideration elsewhere.
+
+Sincerely,
+Senjie Zhang
+3079099853@qq.com

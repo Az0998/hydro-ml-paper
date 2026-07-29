@@ -1,0 +1,8 @@
+﻿变量符号,含义,单位,数据来源
+Q_target,目标站日平均流量,ft³·s⁻¹,USGS-01646500
+precip_target,目标站日降水量,mm,Open-Meteo
+temp_target,目标站日平均气温,℃,Open-Meteo
+Q_01636500,上游支流日平均流量,ft³·s⁻¹,USGS-01636500
+precip_01636500,上游支流日降水量,mm,Open-Meteo
+Q_01638480,上游中游日平均流量,ft³·s⁻¹,USGS-01638480
+precip_01638480,上游中游日降水量,mm,Open-Meteo

@@ -1,0 +1,5 @@
+• ML gains are judged against lagged-upstream routing, not persistence alone.
+• James River replication confirms protocol transfer in the mid-Atlantic.
+• Oracle precip lifts 3–7d NSE; raw GFS QPF needs careful use at longer leads.
+• P90 flood CSI is useful at 1 day but weak for weekly observation-only alerts.
+• Upstream ablation shows basin-dependent gauge value for next-day outlooks.

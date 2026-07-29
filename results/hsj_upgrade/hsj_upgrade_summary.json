@@ -1,0 +1,235 @@
+{
+  "threshold_P90_cfs": 26200.0,
+  "horizons": {
+    "1": {
+      "routing": {
+        "lag_days": 0,
+        "coefficients": {
+          "intercept": 887.2971334724953,
+          "Q_target": 0.47259872709598005,
+          "Q_01636500": 1.214140751813462,
+          "Q_01638480": 18.97305906206243
+        },
+        "test_metrics": {
+          "NSE": 0.8606075578827544,
+          "KGE": 0.8429297543730176,
+          "RMSE": 3416.5204794541846,
+          "MAE": 1522.1606389271446,
+          "PBIAS": 3.3807078041166565
+        },
+        "aligned_NSE": 0.860607554295459
+      },
+      "persistence_NSE": 0.7867380401224399,
+      "xgboost_NSE": 0.910278326376242,
+      "lstm_attention_NSE": 0.9315365829949267,
+      "attn_minus_routing_NSE": 0.07092902869946771,
+      "oracle_precip": {
+        "obs_NSE": 0.9315756477822503,
+        "oracle_NSE": 0.9305864402961238,
+        "delta_NSE": -0.0009892074861265199
+      },
+      "flood_P90": {
+        "horizon": 1,
+        "routing": {
+          "threshold_cfs": 26200.0,
+          "hits": 28,
+          "misses": 11,
+          "false_alarms": 6,
+          "correct_negatives": 1048,
+          "POD": 0.7179487179486995,
+          "FAR": 0.1764705882352889,
+          "CSI": 0.6222222222222084,
+          "n_events_obs": 39
+        },
+        "xgb": {
+          "threshold_cfs": 26200.0,
+          "hits": 35,
+          "misses": 4,
+          "false_alarms": 8,
+          "correct_negatives": 1046,
+          "POD": 0.8974358974358744,
+          "FAR": 0.18604651162790264,
+          "CSI": 0.7446808510638139,
+          "n_events_obs": 39
+        },
+        "attn": {
+          "threshold_cfs": 26200.0,
+          "hits": 33,
+          "misses": 6,
+          "false_alarms": 5,
+          "correct_negatives": 1049,
+          "POD": 0.8461538461538244,
+          "FAR": 0.13157894736841758,
+          "CSI": 0.7499999999999829,
+          "n_events_obs": 39
+        },
+        "pers": {
+          "threshold_cfs": 26200.0,
+          "hits": 28,
+          "misses": 11,
+          "false_alarms": 11,
+          "correct_negatives": 1043,
+          "POD": 0.7179487179486995,
+          "FAR": 0.28205128205127483,
+          "CSI": 0.5599999999999887,
+          "n_events_obs": 39
+        }
+      }
+    },
+    "3": {
+      "routing": {
+        "lag_days": 0,
+        "coefficients": {
+          "intercept": 4742.223136906195,
+          "Q_target": 0.361041799891357,
+          "Q_01636500": 0.5209530887089373,
+          "Q_01638480": 13.941899601681671
+        },
+        "test_metrics": {
+          "NSE": 0.3795593947407494,
+          "KGE": 0.41460887342366537,
+          "RMSE": 7207.995740273356,
+          "MAE": 4099.513278420143,
+          "PBIAS": 19.377112347185417
+        },
+        "aligned_NSE": 0.37955939293722174
+      },
+      "persistence_NSE": 0.16426558379212797,
+      "xgboost_NSE": 0.45820986448882084,
+      "lstm_attention_NSE": 0.4436346685363364,
+      "attn_minus_routing_NSE": 0.06407527559911463,
+      "oracle_precip": {
+        "obs_NSE": 0.44362136460207013,
+        "oracle_NSE": 0.5648383495209737,
+        "delta_NSE": 0.12121698491890354
+      },
+      "flood_P90": {
+        "horizon": 3,
+        "routing": {
+          "threshold_cfs": 26200.0,
+          "hits": 10,
+          "misses": 29,
+          "false_alarms": 11,
+          "correct_negatives": 1043,
+          "POD": 0.25641025641024984,
+          "FAR": 0.5238095238094989,
+          "CSI": 0.199999999999996,
+          "n_events_obs": 39
+        },
+        "xgb": {
+          "threshold_cfs": 26200.0,
+          "hits": 21,
+          "misses": 18,
+          "false_alarms": 24,
+          "correct_negatives": 1030,
+          "POD": 0.5384615384615247,
+          "FAR": 0.5333333333333214,
+          "CSI": 0.33333333333332804,
+          "n_events_obs": 39
+        },
+        "attn": {
+          "threshold_cfs": 26200.0,
+          "hits": 15,
+          "misses": 24,
+          "false_alarms": 13,
+          "correct_negatives": 1041,
+          "POD": 0.38461538461537476,
+          "FAR": 0.46428571428569776,
+          "CSI": 0.2884615384615329,
+          "n_events_obs": 39
+        },
+        "pers": {
+          "threshold_cfs": 26200.0,
+          "hits": 11,
+          "misses": 28,
+          "false_alarms": 29,
+          "correct_negatives": 1025,
+          "POD": 0.28205128205127483,
+          "FAR": 0.7249999999999819,
+          "CSI": 0.16176470588235056,
+          "n_events_obs": 39
+        }
+      }
+    },
+    "7": {
+      "routing": {
+        "lag_days": 3,
+        "coefficients": {
+          "intercept": 6579.939259562193,
+          "Q_target": 0.3164600435728004,
+          "Q_01636500": 0.6166137608281965,
+          "Q_01638480": -0.6624356111064758
+        },
+        "test_metrics": {
+          "NSE": 0.0719596625414588,
+          "KGE": 0.10624561795177934,
+          "RMSE": 8815.518101908918,
+          "MAE": 5797.563965407635,
+          "PBIAS": 30.05903083610077
+        },
+        "aligned_NSE": 0.07195966105725238
+      },
+      "persistence_NSE": -0.39336700118011425,
+      "xgboost_NSE": 0.07100510393051152,
+      "lstm_attention_NSE": 0.21706083515242725,
+      "attn_minus_routing_NSE": 0.14510117409517487,
+      "oracle_precip": {
+        "obs_NSE": 0.21752056059425662,
+        "oracle_NSE": 0.41369501636110806,
+        "delta_NSE": 0.19617445576685144
+      },
+      "flood_P90": {
+        "horizon": 7,
+        "routing": {
+          "threshold_cfs": 26200.0,
+          "hits": 2,
+          "misses": 37,
+          "false_alarms": 13,
+          "correct_negatives": 1041,
+          "POD": 0.05128205128204996,
+          "FAR": 0.8666666666666089,
+          "CSI": 0.03846153846153772,
+          "n_events_obs": 39
+        },
+        "xgb": {
+          "threshold_cfs": 26200.0,
+          "hits": 6,
+          "misses": 33,
+          "false_alarms": 36,
+          "correct_negatives": 1018,
+          "POD": 0.15384615384614989,
+          "FAR": 0.8571428571428367,
+          "CSI": 0.07999999999999893,
+          "n_events_obs": 39
+        },
+        "attn": {
+          "threshold_cfs": 26200.0,
+          "hits": 13,
+          "misses": 26,
+          "false_alarms": 11,
+          "correct_negatives": 1043,
+          "POD": 0.33333333333332477,
+          "FAR": 0.4583333333333143,
+          "CSI": 0.2599999999999948,
+          "n_events_obs": 39
+        },
+        "pers": {
+          "threshold_cfs": 26200.0,
+          "hits": 5,
+          "misses": 34,
+          "false_alarms": 39,
+          "correct_negatives": 1015,
+          "POD": 0.12820512820512492,
+          "FAR": 0.8863636363636161,
+          "CSI": 0.06410256410256329,
+          "n_events_obs": 39
+        }
+      }
+    }
+  },
+  "novelty_notes": [
+    "Adds lagged-upstream linear routing as a hydrologic baseline beyond persistence.",
+    "Adds oracle precipitation ceiling to quantify when QPF is required.",
+    "Adds POD/FAR/CSI flood-threshold skill for operational relevance."
+  ]
+}
