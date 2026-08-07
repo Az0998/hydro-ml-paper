@@ -1,0 +1,92 @@
+{
+  "willamette": {
+    "climate": "humid_pacific_nw",
+    "target": "14191000",
+    "upstream": [
+      "14174000",
+      "14182500"
+    ],
+    "sites": {
+      "14174000": {
+        "name": "Willamette River at Harrisburg, OR",
+        "lat": 44.274,
+        "lon": -123.1726,
+        "role": "midstream"
+      },
+      "14182500": {
+        "name": "Santiam River at Jefferson, OR",
+        "lat": 44.7173,
+        "lon": -123.0112,
+        "role": "tributary"
+      },
+      "14191000": {
+        "name": "Willamette River at Salem, OR",
+        "lat": 44.9443,
+        "lon": -123.0426,
+        "role": "downstream"
+      }
+    }
+  },
+  "animas": {
+    "climate": "snowmelt_rockies",
+    "target": "09363500",
+    "upstream": [
+      "09357500",
+      "09359000"
+    ],
+    "sites": {
+      "09357500": {
+        "name": "Animas River at Howardsville, CO",
+        "lat": 37.8361,
+        "lon": -107.5881,
+        "role": "headwater"
+      },
+      "09359000": {
+        "name": "Animas River below Silverton, CO",
+        "lat": 37.795,
+        "lon": -107.6673,
+        "role": "midstream"
+      },
+      "09363500": {
+        "name": "Animas River at Durango, CO",
+        "lat": 37.2794,
+        "lon": -107.8803,
+        "role": "downstream"
+      }
+    }
+  },
+  "verde": {
+    "climate": "semiarid_southwest",
+    "target": "09506000",
+    "upstream": [
+      "09504000",
+      "09503700"
+    ],
+    "sites": {
+      "09504000": {
+        "name": "Verde River near Clarkdale, AZ",
+        "lat": 34.7567,
+        "lon": -112.0549,
+        "role": "midstream"
+      },
+      "09503700": {
+        "name": "Oak Creek near Cornville, AZ",
+        "lat": 34.717,
+        "lon": -111.894,
+        "role": "tributary"
+      },
+      "09506000": {
+        "name": "Verde River near Camp Verde, AZ",
+        "lat": 34.5903,
+        "lon": -111.9085,
+        "role": "downstream"
+      }
+    }
+  },
+  "potomac": {
+    "climate": "humid_mid_atlantic"
+  },
+  "james": {
+    "climate": "humid_mid_atlantic"
+  }
+}

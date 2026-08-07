@@ -1,0 +1,16 @@
+{
+  "model": "XGBoost",
+  "horizon": 1,
+  "n_shap_samples": 400,
+  "channel_mean_abs_shap": {
+    "Q_target": 0.014164632043684833,
+    "Q_01638480": 0.0034823619954598446,
+    "Q_01636500": 0.0033994842359485727,
+    "temp_target": 0.0017321624773709724,
+    "precip_01636500": 0.0015857455417669067,
+    "precip_01638480": 0.0010553025146994818,
+    "precip_target": 0.0007613367629043448
+  },
+  "test_NSE": 0.9112442578719168,
+  "note": "Channel scores average |SHAP| across the 30-day flattened lags."
+}

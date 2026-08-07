@@ -1,0 +1,323 @@
+{
+  "basins": {
+    "potomac": {
+      "climate": "humid_mid_atlantic",
+      "basin": "potomac",
+      "n_days": 8764,
+      "features": [
+        "Q_target",
+        "precip_target",
+        "temp_target",
+        "Q_01636500",
+        "precip_01636500",
+        "Q_01638480",
+        "precip_01638480"
+      ],
+      "horizons": {
+        "1": {
+          "persistence_NSE": 0.7867380401224399,
+          "routing_NSE": 0.860607554295459,
+          "xgboost_NSE": 0.9112442578719168,
+          "lstm_attention_NSE": 0.9302540937813809,
+          "attn_minus_routing": 0.06964653948592192,
+          "ablation": {
+            "full_NSE": 0.9262546787512203,
+            "local_NSE": 0.906562770254056,
+            "delta_NSE": 0.01969190849716429
+          },
+          "routing_lag": 0
+        },
+        "3": {
+          "persistence_NSE": 0.16426558379212797,
+          "routing_NSE": 0.37955939293722174,
+          "xgboost_NSE": 0.4631976711695871,
+          "lstm_attention_NSE": 0.4264472875122963,
+          "attn_minus_routing": 0.046887894575074585,
+          "ablation": {
+            "full_NSE": 0.4264472875122963,
+            "local_NSE": 0.33562391160563054,
+            "delta_NSE": 0.09082337590666578
+          },
+          "routing_lag": 0
+        },
+        "7": {
+          "persistence_NSE": -0.39336700118011425,
+          "routing_NSE": 0.07195966105725238,
+          "xgboost_NSE": 0.07673451198944292,
+          "lstm_attention_NSE": 0.2179440182135598,
+          "attn_minus_routing": 0.14598435715630742,
+          "ablation": {
+            "full_NSE": 0.2179440182135598,
+            "local_NSE": -0.06677516866926281,
+            "delta_NSE": 0.2847191868828226
+          },
+          "routing_lag": 3
+        }
+      }
+    },
+    "james": {
+      "climate": "humid_mid_atlantic",
+      "basin": "james",
+      "n_days": 8766,
+      "features": [
+        "Q_target",
+        "precip_target",
+        "temp_target",
+        "Q_02034000",
+        "precip_02034000",
+        "Q_02035000",
+        "precip_02035000"
+      ],
+      "horizons": {
+        "1": {
+          "persistence_NSE": 0.7734199966271613,
+          "routing_NSE": 0.919520233678485,
+          "xgboost_NSE": 0.9393926766838766,
+          "lstm_attention_NSE": 0.9327743082951847,
+          "attn_minus_routing": 0.013254074616699696,
+          "ablation": {
+            "full_NSE": 0.9327743082951847,
+            "local_NSE": 0.8033568709653367,
+            "delta_NSE": 0.129417437329848
+          },
+          "routing_lag": 0
+        },
+        "3": {
+          "persistence_NSE": 0.2927675689881549,
+          "routing_NSE": 0.43496114835028876,
+          "xgboost_NSE": 0.4963521085205933,
+          "lstm_attention_NSE": 0.39173223609187846,
+          "attn_minus_routing": -0.0432289122584103,
+          "ablation": {
+            "full_NSE": 0.39173223609187846,
+            "local_NSE": 0.3022273924470784,
+            "delta_NSE": 0.08950484364480005
+          },
+          "routing_lag": 0
+        },
+        "7": {
+          "persistence_NSE": -0.05203945913957919,
+          "routing_NSE": 0.23484875563348273,
+          "xgboost_NSE": 0.2922993259615122,
+          "lstm_attention_NSE": 0.30922700134761394,
+          "attn_minus_routing": 0.07437824571413121,
+          "ablation": {
+            "full_NSE": 0.30922700134761394,
+            "local_NSE": 0.2979552980566861,
+            "delta_NSE": 0.01127170329092786
+          },
+          "routing_lag": 3
+        }
+      }
+    },
+    "willamette": {
+      "climate": "humid_pacific_nw",
+      "basin": "willamette",
+      "n_days": 8766,
+      "features": [
+        "Q_target",
+        "precip_target",
+        "temp_target",
+        "Q_14174000",
+        "precip_14174000",
+        "Q_14182500",
+        "precip_14182500"
+      ],
+      "horizons": {
+        "1": {
+          "persistence_NSE": 0.9502847352439849,
+          "routing_NSE": 0.9696112549317852,
+          "xgboost_NSE": 0.9856877619969284,
+          "lstm_attention_NSE": 0.9898466741908799,
+          "attn_minus_routing": 0.020235419259094667,
+          "ablation": {
+            "full_NSE": 0.9889995105297491,
+            "local_NSE": 0.9855083989355057,
+            "delta_NSE": 0.0034911115942434234
+          },
+          "routing_lag": 0
+        },
+        "3": {
+          "persistence_NSE": 0.729689674106935,
+          "routing_NSE": 0.7711973537414277,
+          "xgboost_NSE": 0.8039631064379593,
+          "lstm_attention_NSE": 0.7536027001659523,
+          "attn_minus_routing": -0.017594653575475405,
+          "ablation": {
+            "full_NSE": 0.7536027001659523,
+            "local_NSE": 0.7899803360009403,
+            "delta_NSE": -0.03637763583498799
+          },
+          "routing_lag": 0
+        },
+        "7": {
+          "persistence_NSE": 0.4178790556524098,
+          "routing_NSE": 0.5102608139829903,
+          "xgboost_NSE": 0.49894488956241034,
+          "lstm_attention_NSE": 0.3609545727265405,
+          "attn_minus_routing": -0.14930624125644976,
+          "ablation": {
+            "full_NSE": 0.3609545727265405,
+            "local_NSE": 0.4737994683727458,
+            "delta_NSE": -0.11284489564620526
+          },
+          "routing_lag": 0
+        }
+      }
+    },
+    "animas": {
+      "climate": "snowmelt_rockies",
+      "basin": "animas",
+      "n_days": 8766,
+      "features": [
+        "Q_target",
+        "precip_target",
+        "temp_target",
+        "Q_09358000",
+        "precip_09358000",
+        "Q_09361500",
+        "precip_09361500"
+      ],
+      "horizons": {
+        "1": {
+          "persistence_NSE": 0.9774519061276994,
+          "routing_NSE": 0.980144066381283,
+          "xgboost_NSE": 0.9850186285262547,
+          "lstm_attention_NSE": 0.9881142676381939,
+          "attn_minus_routing": 0.007970201256910836,
+          "ablation": {
+            "full_NSE": 0.9881142676381939,
+            "local_NSE": 0.9783173357276541,
+            "delta_NSE": 0.009796931910539763
+          },
+          "routing_lag": 1
+        },
+        "3": {
+          "persistence_NSE": 0.8952744731521234,
+          "routing_NSE": 0.9039807346112154,
+          "xgboost_NSE": 0.9110516258503973,
+          "lstm_attention_NSE": 0.85570929983586,
+          "attn_minus_routing": -0.04827143477535545,
+          "ablation": {
+            "full_NSE": 0.85570929983586,
+            "local_NSE": 0.8805095781522707,
+            "delta_NSE": -0.02480027831641074
+          },
+          "routing_lag": 3
+        },
+        "7": {
+          "persistence_NSE": 0.811639363632866,
+          "routing_NSE": 0.848058781144336,
+          "xgboost_NSE": 0.8492623315951342,
+          "lstm_attention_NSE": 0.8145860218287154,
+          "attn_minus_routing": -0.03347275931562055,
+          "ablation": {
+            "full_NSE": 0.8391558256742265,
+            "local_NSE": 0.7934300995861647,
+            "delta_NSE": 0.0457257260880618
+          },
+          "routing_lag": 3
+        }
+      }
+    },
+    "verde": {
+      "climate": "semiarid_southwest",
+      "basin": "verde",
+      "n_days": 8766,
+      "features": [
+        "Q_target",
+        "precip_target",
+        "temp_target",
+        "Q_09503700",
+        "precip_09503700",
+        "Q_09504000",
+        "precip_09504000"
+      ],
+      "horizons": {
+        "1": {
+          "persistence_NSE": 0.4214616132761393,
+          "routing_NSE": 0.6052790294240207,
+          "xgboost_NSE": 0.6642920202554992,
+          "lstm_attention_NSE": 0.38450152144412175,
+          "attn_minus_routing": -0.22077750797989892,
+          "ablation": {
+            "full_NSE": 0.38450152144412175,
+            "local_NSE": 0.32374393643611843,
+            "delta_NSE": 0.06075758500800332
+          },
+          "routing_lag": 0
+        },
+        "3": {
+          "persistence_NSE": -0.19600281831001953,
+          "routing_NSE": 0.24526282516343834,
+          "xgboost_NSE": -0.12336432974759037,
+          "lstm_attention_NSE": 0.12950274350323987,
+          "attn_minus_routing": -0.11576008166019847,
+          "ablation": {
+            "full_NSE": 0.12950274350323987,
+            "local_NSE": 0.06926061133867512,
+            "delta_NSE": 0.060242132164564755
+          },
+          "routing_lag": 3
+        },
+        "7": {
+          "persistence_NSE": -0.12990289219015105,
+          "routing_NSE": 0.18841421349952525,
+          "xgboost_NSE": -0.11104692086160406,
+          "lstm_attention_NSE": 0.07661770819256164,
+          "attn_minus_routing": -0.11179650530696361,
+          "ablation": {
+            "full_NSE": 0.04720338686431824,
+            "local_NSE": 0.09217027078449835,
+            "delta_NSE": -0.04496688392018011
+          },
+          "routing_lag": 3
+        }
+      }
+    }
+  },
+  "condition_summary": {
+    "interpretation": [
+      "Large ablation \u0394NSE => upstream gauges carry material next-day information.",
+      "Small ML-minus-routing => skill is mostly linear routing/memory.",
+      "Compare climates to state when information value holds."
+    ],
+    "by_basin_1d": {
+      "potomac": {
+        "climate": "humid_mid_atlantic",
+        "ablation_delta": 0.01969190849716429,
+        "attn_minus_routing": 0.06964653948592192,
+        "routing_NSE": 0.860607554295459,
+        "attn_NSE": 0.9302540937813809
+      },
+      "james": {
+        "climate": "humid_mid_atlantic",
+        "ablation_delta": 0.129417437329848,
+        "attn_minus_routing": 0.013254074616699696,
+        "routing_NSE": 0.919520233678485,
+        "attn_NSE": 0.9327743082951847
+      },
+      "willamette": {
+        "climate": "humid_pacific_nw",
+        "ablation_delta": 0.0034911115942434234,
+        "attn_minus_routing": 0.020235419259094667,
+        "routing_NSE": 0.9696112549317852,
+        "attn_NSE": 0.9898466741908799
+      },
+      "animas": {
+        "climate": "snowmelt_rockies",
+        "ablation_delta": 0.009796931910539763,
+        "attn_minus_routing": 0.007970201256910836,
+        "routing_NSE": 0.980144066381283,
+        "attn_NSE": 0.9881142676381939
+      },
+      "verde": {
+        "climate": "semiarid_southwest",
+        "ablation_delta": 0.06075758500800332,
+        "attn_minus_routing": -0.22077750797989892,
+        "routing_NSE": 0.6052790294240207,
+        "attn_NSE": 0.38450152144412175
+      }
+    }
+  }
+}

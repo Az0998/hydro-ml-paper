@@ -1,48 +1,47 @@
-﻿![status](https://img.shields.io/badge/status-paper%20submit-blue) ![venue](https://img.shields.io/badge/target-HSJ-lightgrey)
+﻿![status](https://img.shields.io/badge/status-open%20code-brightgreen)
+![pages](https://img.shields.io/badge/docs-GitHub%20Pages-blue)
 
-# 融合上游水文信息的河流流量多预见期预报（投稿版）
+# Hydro-ML Paper
 
-**当前主攻：** *Hydrological Sciences Journal*  
-**已试投：** JHRS（desk reject；已按拒稿理由升级）  
-详见 `JOURNAL_STRATEGY.md`、`LESSONS_FROM_JHRS_REJECTION.md`、`paper/HSJ_SUBMISSION_CHECKLIST.md`。
+**Project site:** <https://az0998.github.io/hydro-ml-paper/>  
+**Code:** <https://github.com/Az0998/hydro-ml-paper>
 
-## 一键生成投稿包
+Multi-horizon streamflow forecasting with public USGS + Open-Meteo data. Focus: **information value** of upstream gauges and precipitation foresight (not a new architecture claim).
+
+## Highlights
+
+- Potomac / James mid-Atlantic protocol + routing baseline, ablation, QPF ladder, flood CSI  
+- Climate-zone transfer: Willamette (humid NW), Animas (snowmelt), Verde (semi-arid)  
+- SHAP channel importance aligned with permutation tests  
+
+## Quick start
 
 ```bash
+git clone https://github.com/Az0998/hydro-ml-paper.git
 cd hydro-ml-paper
-python download_extended.py      # Potomac+James+QPF（已下载可跳过）
-python run_hsj_upgrade.py        # 路由/oracle/洪水CSI
-python run_tier2_upgrade.py      # James迁移 + 真实QPF
-python run_qpf_extra.py          # QPF降水检验（可选）
-python make_hsj_graphical_abstract.py
-python build_hsj_manuscript.py
+pip install -r requirements.txt
+python download_data.py
+python run_experiment.py
 ```
 
-## HSJ 投稿文件（`paper/`）
+Climate transfer / SHAP:
 
-| 文件 | 用途 |
-|------|------|
-| `HSJ_Potomac_forecast_information_value.docx` | 主稿 |
-| `HSJ_highlights.docx` | Highlights |
-| `HSJ_cover_letter.txt` | 附信 |
-| `HSJ_Declaration_of_Interest.docx` | 利益冲突 |
-| `HSJ_graphical_abstract.png` | 图形摘要 |
+```bash
+python download_climate_basins.py
+python run_climate_transfer.py
+python run_shap_explain.py
+```
 
-## 核心结果（测试集 2021–2023，增强实验）
+## Key paths
 
-| 尺度 | 最优模型 | NSE | 备注 |
-|------|----------|-----|------|
-| 1 天 | LSTM-Attention | **0.931** | 上游消融：0.931→0.907 |
-| 3 天 | LSTM | **0.543** | Attention 非最优 |
-| 7 天 | LSTM-Attention | **0.196** | 周尺度整体偏弱 |
+| Path | Content |
+|------|---------|
+| `docs/` | GitHub Pages site |
+| `results/climate_transfer/` | Multi-basin metrics |
+| `results/shap/` | SHAP summary |
+| `ROADMAP_NEXT.md` | Next upgrades (GEFS, foundation models) |
+| `paper/` | Manuscript package |
 
-## 研究定位（审稿友好）
+## Data
 
-不宣称“发明新网络”，而强调：
-1. 上游站网对华盛顿控制站短预见期的边际价值  
-2. 深学 vs 树模型随预见期变化的条件比较优势  
-3. 洪峰/季节分层诊断对中大西洋业务预报的区域认识  
-
-## 旧版 LaTeX / 水科学进展 Word
-
-仍保留 `paper/manuscript.tex` 与 `build_word_manuscript.py`（中文核心格式）作为备份，**主投请用 JHRS 英文稿**。
+Scripts download from USGS NWIS and Open-Meteo. Processed CSVs under `data/` may be committed for convenience; re-run download scripts to refresh.

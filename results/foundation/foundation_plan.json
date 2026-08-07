@@ -1,0 +1,21 @@
+{
+  "status": "skeleton",
+  "near_term_proxy": "multi-basin pretrain + per-basin fine-tune (implementable now)",
+  "aspirational": [
+    "ClimaX",
+    "Prithvi-WxC",
+    "other open hydro FM checkpoints"
+  ],
+  "baselines": [
+    "LSTM-Attention scratch (current paper)"
+  ],
+  "metrics": [
+    "NSE/KGE by horizon",
+    "ablation \u0394NSE",
+    "sample-efficiency curves"
+  ],
+  "deliverables": [
+    "results/foundation/finetune_vs_scratch.csv",
+    "figures/foundation/fig_sample_efficiency.png"
+  ]
+}

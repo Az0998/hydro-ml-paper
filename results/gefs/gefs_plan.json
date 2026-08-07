@@ -1,0 +1,26 @@
+{
+  "status": "skeleton",
+  "goal": "Replace deterministic GFS QPF with ensemble precip \u2192 probabilistic streamflow",
+  "data_options": [
+    "Open-Meteo Ensemble API (member precip)",
+    "NOAA GEFS reforecast / operational archive"
+  ],
+  "models": [
+    "Member-wise forcing of trained Attention (non-intrusive)",
+    "Quantile regression / CRPS-trained head (intrusive)"
+  ],
+  "metrics": [
+    "CRPS",
+    "reliability diagram",
+    "P(Q>=P90) CSI at chosen probability thresholds"
+  ],
+  "deliverables": [
+    "results/gefs/prob_metrics.csv",
+    "figures/gefs/fig_crps_by_horizon.png",
+    "figures/gefs/fig_reliability_p90.png"
+  ],
+  "next_code_hooks": {
+    "download": "download_gefs_ensemble.py",
+    "run": "run_gefs_probabilistic.py (expand this file)"
+  }
+}

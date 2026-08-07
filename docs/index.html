@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hydro-ML Paper — Multi-horizon streamflow forecasting</title>
+  <meta name="description" content="Information value of upstream gauges and precipitation foresight for multi-horizon streamflow forecasting across mid-Atlantic and multi-climate basins." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #14201b;
+      --muted: #4a5c54;
+      --line: #d5e0da;
+      --bg: #f4f7f5;
+      --card: #ffffff;
+      --accent: #1f6f5b;
+      --accent-2: #c45c26;
+      --chip: #e7f0ec;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "DM Sans", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 10% -10%, #d9ece4 0%, transparent 55%),
+        radial-gradient(900px 400px at 100% 0%, #f3e6dc 0%, transparent 50%),
+        var(--bg);
+      line-height: 1.55;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    header {
+      padding: 2.2rem 0 1.5rem;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 2rem;
+    }
+    .kicker {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    h1 {
+      font-size: clamp(1.6rem, 3.5vw, 2.35rem);
+      line-height: 1.2;
+      margin: 0 0 0.9rem;
+      max-width: 18em;
+      font-weight: 700;
+    }
+    .lead { color: var(--muted); font-size: 1.05rem; max-width: 46rem; margin: 0 0 1.4rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+    a.btn {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      text-decoration: none; border-radius: 999px;
+      padding: 0.55rem 1rem; font-weight: 600; font-size: 0.92rem;
+      border: 1px solid var(--line); background: var(--card); color: var(--ink);
+    }
+    a.btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    a.btn:hover { transform: translateY(-1px); }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 1.5rem 0 2rem; }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      padding: 1rem 1.1rem; box-shadow: 0 8px 24px rgba(20, 32, 27, 0.04);
+    }
+    .card h3 { margin: 0 0 0.35rem; font-size: 1rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+    .metric { font-family: "IBM Plex Mono", monospace; font-size: 1.35rem; color: var(--accent); font-weight: 500; }
+    section { margin: 2.2rem 0; }
+    h2 { font-size: 1.25rem; margin: 0 0 0.8rem; }
+    table {
+      width: 100%; border-collapse: collapse; background: var(--card);
+      border: 1px solid var(--line); border-radius: 12px; overflow: hidden; font-size: 0.9rem;
+    }
+    th, td { padding: 0.65rem 0.75rem; border-bottom: 1px solid var(--line); text-align: left; }
+    th { background: var(--chip); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; }
+    tr:last-child td { border-bottom: 0; }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0.8rem 0 0; }
+    .chip {
+      background: var(--chip); color: var(--accent); border-radius: 999px;
+      padding: 0.25rem 0.65rem; font-size: 0.78rem; font-weight: 600;
+    }
+    .figs { display: grid; gap: 0.9rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .figs figure {
+      margin: 0; background: var(--card); border: 1px solid var(--line);
+      border-radius: 12px; overflow: hidden;
+    }
+    .figs img { width: 100%; display: block; background: #fff; }
+    .figs figcaption { padding: 0.55rem 0.75rem; font-size: 0.82rem; color: var(--muted); }
+    footer {
+      margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    code { font-family: "IBM Plex Mono", monospace; font-size: 0.85em; background: var(--chip); padding: 0.1em 0.35em; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">Open research · USGS + Open-Meteo</div>
+      <h1>Information value of gauges &amp; precip foresight for multi-horizon streamflow forecasts</h1>
+      <p class="lead">
+        Public, reproducible experiments on how upstream gauges, machine learning, and precipitation foresight
+        partition short-range forecast skill — across Potomac/James and additional climate-zone basins.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="https://github.com/Az0998/hydro-ml-paper">GitHub 仓库</a>
+        <a class="btn" href="https://github.com/Az0998/hydro-ml-paper#readme">README / 复现</a>
+        <a class="btn" href="https://github.com/Az0998/hydro-ml-paper/tree/main/results">结果 JSON/CSV</a>
+      </div>
+      <div class="chips">
+        <span class="chip">1 / 3 / 7-day</span>
+        <span class="chip">Routing baseline</span>
+        <span class="chip">Ablation</span>
+        <span class="chip">GFS QPF ladder</span>
+        <span class="chip">5 climate basins</span>
+        <span class="chip">SHAP</span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <div class="metric">0.93</div>
+        <h3>Potomac 1-day NSE</h3>
+        <p>LSTM-Attention on Washington, D.C. outlet (test 2021–2023).</p>
+      </div>
+      <div class="card">
+        <div class="metric">+0.13</div>
+        <h3>James ablation ΔNSE</h3>
+        <p>Largest next-day upstream-gauge information gain among humid basins.</p>
+      </div>
+      <div class="card">
+        <div class="metric">5</div>
+        <h3>Climate-zone basins</h3>
+        <p>Humid Atlantic / Pacific NW, snowmelt Rockies, semi-arid Southwest.</p>
+      </div>
+    </div>
+
+    <section>
+      <h2>研究问题</h2>
+      <p style="color:var(--muted); max-width:46rem;">
+        不把“上游有用”当作新颖点，而量化：相对<strong>滞后上游线性路由</strong>，机器学习还剩多少增益；
+        何时需要<strong>降水预见（QPF/oracle）</strong>；以及该信息价值在不同气候带是否成立。
+      </p>
+    </section>
+
+    <section>
+      <h2>多气候带：上游信息价值（1 天消融）</h2>
+      <table>
+        <thead>
+          <tr><th>Basin</th><th>Climate</th><th>Routing NSE</th><th>Attn NSE</th><th>Ablation ΔNSE</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>James</td><td>humid mid-Atlantic</td><td>0.92</td><td>0.93</td><td><strong>+0.13</strong></td></tr>
+          <tr><td>Verde</td><td>semi-arid SW</td><td>0.61</td><td>0.38</td><td>+0.06</td></tr>
+          <tr><td>Potomac</td><td>humid mid-Atlantic</td><td>0.86</td><td>0.93</td><td>+0.02</td></tr>
+          <tr><td>Animas</td><td>snowmelt Rockies</td><td>0.98</td><td>0.99</td><td>+0.01</td></tr>
+          <tr><td>Willamette</td><td>humid Pacific NW</td><td>0.97</td><td>0.99</td><td>≈0</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>关键图件</h2>
+      <div class="figs">
+        <figure>
+          <img src="assets/fig_ablation_by_climate.png" alt="Ablation by climate" />
+          <figcaption>上游消融 ΔNSE 随气候带变化</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/fig_routing_ml_by_climate.png" alt="Routing vs ML" />
+          <figcaption>路由基准 vs ML（1 天）</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/fig_shap_xgb_1d.png" alt="SHAP" />
+          <figcaption>Potomac 1-day XGBoost SHAP 通道重要性</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/fig_real_qpf_ladder.png" alt="QPF ladder" />
+          <figcaption>真实 GFS QPF / oracle 技能阶梯（2024）</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>快速复现</h2>
+      <pre style="background:#14201b;color:#e7f0ec;padding:1rem 1.1rem;border-radius:12px;overflow:auto;font-family:IBM Plex Mono,monospace;font-size:0.82rem;"><code>git clone https://github.com/Az0998/hydro-ml-paper.git
+cd hydro-ml-paper
+pip install -r requirements.txt
+python download_data.py
+python run_experiment.py
+python run_climate_transfer.py
+python run_shap_explain.py</code></pre>
+    </section>
+
+    <footer>
+      <div>Code &amp; data pipeline: <a href="https://github.com/Az0998/hydro-ml-paper">github.com/Az0998/hydro-ml-paper</a></div>
+      <div>Data sources: USGS NWIS · Open-Meteo. Site pages use relative links to repository figures.</div>
+    </footer>
+  </div>
+</body>
+</html>
