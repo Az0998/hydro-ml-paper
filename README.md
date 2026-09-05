@@ -1,9 +1,22 @@
 ﻿![status](https://img.shields.io/badge/status-open%20code-brightgreen)
-![pages](https://img.shields.io/badge/docs-GitHub%20Pages-blue)
+
+# Hydro-ML：多预见期流量预报与信息价值
+
+> **一句话：** 公开 USGS + Open-Meteo 数据上做多预见期流量预报，评估上游站与降水预见的信息价值（不是新网络刷榜）。个人兴趣自学；曾作为 HSJ 投稿流水线，**尚无录用**。更新叙事见姊妹仓 [forecast-information-value](https://github.com/Az0998/forecast-information-value)。
+
+**仓库：** https://github.com/Az0998/hydro-ml-paper  
+**作者：** 张森捷（Senjie Zhang），兰州大学
+
+| 项目 | 说明 |
+|------|------|
+| 流域 | Potomac / James 协议 + 气候带迁移（Willamette / Animas / Verde） |
+| 方法 | 路由基线、消融、QPF 阶梯、洪水 CSI、SHAP |
+| 复现 | `download_data.py` → `run_experiment.py` |
+
+---
 
 # Hydro-ML Paper
 
-**Project site:** <https://az0998.github.io/hydro-ml-paper/>  
 **Code:** <https://github.com/Az0998/hydro-ml-paper>
 
 Multi-horizon streamflow forecasting with public USGS + Open-Meteo data. Focus: **information value** of upstream gauges and precipitation foresight (not a new architecture claim).
