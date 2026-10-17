@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+type: software
+title: "Hydro-ML: multi-horizon streamflow forecasting and the information value of upstream gauges"
+authors:
+  - name: "Az0998"
+repository-code: "https://github.com/Az0998/hydro-ml-paper"
+url: "https://az0998.github.io/hydro-ml-paper/"
+license: MIT
